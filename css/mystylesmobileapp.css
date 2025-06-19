@@ -1,0 +1,115 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #237e6c;
+}
+
+/* Layout blocks */
+header, nav, footer {
+  text-align: center;
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0066cc;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.responsive-block {
+  margin-bottom: 40px;
+}
+
+/* Two-column layout that collapses */
+.two-column {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.two-column > div {
+  flex: 1 1 300px;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive YouTube video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive typography */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+p, li { font-size: 1rem; }
+
+/* Mobile media query */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.fancy-font {
+  font-family: 'UnifrakturCook', cursive;
+  font-weight: 700;
+}
+
+
+.western-font {
+  font-family: 'Rye', serif;
+}
+
+.highlight {
+  color: rgb(236, 197, 4);
+  font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
